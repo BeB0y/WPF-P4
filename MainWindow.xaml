@@ -1,0 +1,24 @@
+<Window x:Class="EwidencjaPrzejazdowWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ewidencja przejazdów" Height="800" Width="1350"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Left" Width="300" Background="{StaticResource PrimaryBrush}">
+            <TextBlock Text="Ewidencja przejazdów"
+                       Foreground="White"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Margin="20,30,20,20"/>
+
+            <Button Content="Strona główna" Click="HomeButton_Click"/>
+            <Button Content="Kierowcy" Click="KierowcyButton_Click"/>
+            <Button Content="Pojazdy" Click="PojazdyButton_Click"/>
+            <Button Content="Przejazdy" Click="PrzejazdyButton_Click"/>
+            <Button Content="Koszty" Click="KosztyButton_Click"/>
+            <Button Content="Prawa jazdy" Click="PrawoJazdyButton_Click"/>
+        </StackPanel>
+
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+    </DockPanel>
+</Window>
