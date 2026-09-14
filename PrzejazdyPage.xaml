@@ -1,0 +1,46 @@
+<Page x:Class="EwidencjaPrzejazdowWPF.Pages.PrzejazdyPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="PrzejazdyPage">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" Margin="10">
+            <TextBlock Text="Przejazdy" FontSize="24" FontWeight="Bold" Margin="5"/>
+            <WrapPanel>
+                <DatePicker x:Name="DataDatePicker" Width="140"/>
+                <TextBox x:Name="CelTextBox" Width="180"/>
+                <TextBox x:Name="TrasaTextBox" Width="220"/>
+                <TextBox x:Name="KilometryTextBox" Width="100"/>
+                <TextBox x:Name="LicznikPrzedTextBox" Width="110"/>
+                <TextBox x:Name="LicznikPoTextBox" Width="110"/>
+            </WrapPanel>
+            <WrapPanel>
+                <ComboBox x:Name="KierowcaComboBox" Width="220" DisplayMemberPath="WyswietlanaNazwa" SelectedValuePath="IdKierowcy"/>
+                <ComboBox x:Name="PojazdComboBox" Width="220" DisplayMemberPath="WyswietlanaNazwa" SelectedValuePath="IdPojazdu"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Button Content="Dodaj" Click="AddButton_Click"/>
+                <Button Content="Usuń zaznaczony" Click="DeleteButton_Click" Style="{StaticResource SecondaryButtonStyle}"/>
+                <Button Content="Odśwież" Click="RefreshButton_Click"/>
+            </WrapPanel>
+        </StackPanel>
+
+        <DataGrid x:Name="PrzejazdyGrid" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding IdPrzejazdu}" Width="60"/>
+                <DataGridTextColumn Header="Data" Binding="{Binding DataPrzejazdu, StringFormat=d}" Width="100"/>
+                <DataGridTextColumn Header="Cel" Binding="{Binding CelPrzejazdu}" Width="170"/>
+                <DataGridTextColumn Header="Trasa" Binding="{Binding Trasa}" Width="220"/>
+                <DataGridTextColumn Header="Km" Binding="{Binding LiczbaKilometrow}" Width="80"/>
+                <DataGridTextColumn Header="Licznik przed" Binding="{Binding StanLicznikaPrzed}" Width="110"/>
+                <DataGridTextColumn Header="Licznik po" Binding="{Binding StanLicznikaPo}" Width="110"/>
+                <DataGridTextColumn Header="ID kierowcy" Binding="{Binding IdKierowcy}" Width="90"/>
+                <DataGridTextColumn Header="ID pojazdu" Binding="{Binding IdPojazdu}" Width="90"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
