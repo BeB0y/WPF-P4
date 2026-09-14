@@ -12,6 +12,7 @@ Projekt WPF pod bazę `EwidencjaPrzejazdow`.
 2. Przywróć pakiety NuGet.
 3. W pliku `DataBase/AppDbContext.cs` ustaw poprawny connection string.
 4. Uruchom aplikację.
+5. !!Jeżeli nie pojawi się żaden problem pomiędzy bazą a vis wystarczy kliknąć uruchoma.bat!! :D
 
 ## Domyślny connection string
 Projekt używa domyślnie:
