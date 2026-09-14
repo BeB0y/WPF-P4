@@ -1,6 +1,6 @@
 # EwidencjaPrzejazdowWPF
 
-Gotowy projekt WPF pod bazę `EwidencjaPrzejazdow`.
+Projekt WPF pod bazę `EwidencjaPrzejazdow`.
 
 ## Wymagania
 - Visual Studio 2022 z workloadem `.NET desktop development`
